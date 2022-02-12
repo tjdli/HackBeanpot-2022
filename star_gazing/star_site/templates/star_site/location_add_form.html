@@ -1,0 +1,18 @@
+<html>
+<head>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'star_site/style.css' %}">
+    <title>Star Locations</title>
+</head>
+<body>
+    <h1>Find a great location? Add yours here!</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.name }} <br>
+        {{form.position}}<br>
+        {{form.description}}
+    <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
