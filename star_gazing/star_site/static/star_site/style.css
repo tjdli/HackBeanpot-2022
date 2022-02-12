@@ -1,6 +1,12 @@
 * {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+html body {
+    background-color: rgb(22, 0, 22);
+
+}
+
 .banner {
     background-image: url("https://i0.wp.com/windowscustomization.com/wp-content/uploads/2018/08/moving-stars.gif?fit=750%2C377&quality=80&strip=all&ssl=1");
     background-size: cover;
@@ -17,12 +23,12 @@
 .container {
     padding-top: 3%;
     padding-bottom: 3%;
-    margin: -200px 0px 0px -200px;
+    padding-left: 0%;
     text-align: center;
     color: white;
-    background-color: rgb(20, 0, 20);
+    background-color: rgb(22, 0, 22);
     margin: 0px;
-    overflow-x: hidden; 
+    
     width: 100%;  
 }
 
