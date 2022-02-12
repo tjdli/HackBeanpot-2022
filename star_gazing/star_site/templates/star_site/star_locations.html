@@ -6,14 +6,9 @@
     <title>Star Locations</title>
 </head>
 <body>
-    <h1>Star Locations Forum</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.name }} <br>
-        {{form.position}}<br>
-        {{form.description}}
-    <input type="submit" value="Submit">
-    </form>
+    <button>
+        <a href="the location add form">Add New Location</a>
+    </button>
     {% if locations %}
         {% for location in locations %}
             <h1>{{ location.name }}</h1>
