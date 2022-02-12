@@ -20,11 +20,14 @@ html body {
 }
 
 .banner button {
-    color: white;
+    color: black;
     font-size: 20;
-    height: auto;
+    height: 2em;
     width: 10%;
-    background-color: transparent;
+    background-color: white;
+    opacity: 0.5;
+    border: none;
+    box-shadow: black;
 }
 
 .container {
