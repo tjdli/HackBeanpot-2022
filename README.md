@@ -1,1 +1,0 @@
-# HackBeanpot-2022
