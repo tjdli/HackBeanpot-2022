@@ -18,20 +18,23 @@
     padding-bottom: 3%;
     text-align: center;
     color: white;
-    background-color: #272942;
+    /* background-color: rgb(27, 29, 39); */
+    background-color: rgb(20, 0, 20);    
 }
 .about h3 {
+    padding-top: 2%;
     text-align: left;
-    padding-left: 2%;
+    padding-left: 10%;
 }
 
 .about p {
     text-align: left;
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .about ul {
+    padding-top: 1%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -39,7 +42,8 @@
     list-style-type: none;
     width:100%;
     flex-wrap: no-wrap;
-    padding-left: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 .about li {
     display: inline-block;
