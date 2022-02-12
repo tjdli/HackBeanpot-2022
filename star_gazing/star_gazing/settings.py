@@ -33,7 +33,7 @@ GOOGLE_MAPS_API_KEY = 'AIzaSyDV6nqMJ7_iY1nU3reiUDrltej_Laf5BCw'
 
 INSTALLED_APPS = [
     'star_site',
-    "geoposition",
+    'mapwidgets',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
