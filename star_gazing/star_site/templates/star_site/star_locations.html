@@ -1,0 +1,18 @@
+<html>
+<head>
+    {% load static %}
+    <title>Star Locations</title>
+    <script src="{% static 'star_site/scripts.js' %}"></script>
+</head>
+<body>
+    <h1>Star Locations Forum</h1>
+    {% if locations %}
+        {% for location in locations %}
+            <h1>{{ location.name }}</h1>
+            <p>{{ location.position }}</p>
+            <p>{{ location.description }}</p>
+        {% endfor %}
+    {% endif %}
+    <script>initMap();</script>
+</body>
+</html>

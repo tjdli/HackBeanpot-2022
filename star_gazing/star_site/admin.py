@@ -1,13 +1,19 @@
 from django.contrib import admin
-#from django_google_maps import fields as map_fields
-#from django_google_maps import widgets as map_widgets
+# from django_google_maps import fields as map_fields
+# from django_google_maps import widgets as map_widgets
 
 # Register your models here.
 from .models import Location
 
 
 class LocationAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name')
+    fieldsets = [
+        (None, {'fields': ['name']}),
+        ("Position", {'fields': ['position']}),
+        ("Content", {'fields': ['description']}),
+        ('Date information', {'fields': ['pub_date']}),
+    ]
+    list_display = ('name', 'pub_date')
 
 
 admin.site.register(Location, LocationAdmin)
