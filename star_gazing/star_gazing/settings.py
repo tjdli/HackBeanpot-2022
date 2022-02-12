@@ -41,16 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-MAP_WIDGETS = {
-    "GooglePointFieldWidget": (
-        ("zoom", 15),
-        ("mapCenterLocationName", "amsterdam"),
-        ("GooglePlaceAutocompleteOptions", {'componentRestrictions': {'country': 'nl'}}),
-        ("markerFitZoom", 12),
-    ),
-    "GOOGLE_MAP_API_KEY": GOOGLE_MAPS_API_KEY
-}
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
