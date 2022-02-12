@@ -6,9 +6,7 @@
     <title>Star Locations</title>
 </head>
 <body>
-    <button>
-        <a href="the location add form">Add New Location</a>
-    </button>
+    <a href="{% url 'star_site:add_location' %}"><button>Add New Location</button></a>
     {% if locations %}
         {% for location in locations %}
             <h1>{{ location.name }}</h1>
