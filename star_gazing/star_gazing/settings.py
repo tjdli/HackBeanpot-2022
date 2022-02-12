@@ -33,7 +33,6 @@ GOOGLE_MAPS_API_KEY = 'AIzaSyDV6nqMJ7_iY1nU3reiUDrltej_Laf5BCw'
 
 INSTALLED_APPS = [
     'star_site',
-    'mapwidgets',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,6 +40,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+MAP_WIDGETS = {
+    "GooglePointFieldWidget": (
+        ("zoom", 15),
+        ("mapCenterLocationName", "amsterdam"),
+        ("GooglePlaceAutocompleteOptions", {'componentRestrictions': {'country': 'nl'}}),
+        ("markerFitZoom", 12),
+    ),
+    "GOOGLE_MAP_API_KEY": GOOGLE_MAPS_API_KEY
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
