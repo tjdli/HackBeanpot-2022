@@ -23,6 +23,12 @@
     text-align: left;
     padding-left: 2%;
 }
+
+.about p {
+    text-align: left;
+    padding-left: 10%;
+}
+
 .about ul {
     display: flex;
     justify-content: space-around;
@@ -39,9 +45,9 @@
     max-width: 70%;
 }
 
-/* .about ul li p {
-    max-width: 50%;
-} */
+.about ul li p {
+    text-align: center;
+}
 
 .about ul li img{
     float:top;
