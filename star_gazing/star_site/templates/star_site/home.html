@@ -16,18 +16,21 @@
     <div class="about">
         <h1>About</h1>
         <h3>Meet the team:</h3>
-        <ul>
+        <!-- <ul>
             <li>
                 <img class="profile" src="{% static 'star_site/images/placeholder2.jpg' %}" alt="Alexis Phan"/>
                 <p>Alexis Phan</p>
+                <p>Alexis is a second year CS Major at Northeastern University. Her favorite constellation is Cassiopeia.</p>
             </li>
             <li>
-                <img class="profile" src="{% static 'star_site/images/placeholder1.jpg' %}" alt="David Liu"/>
+                <img class="profile" src="{% static 'star_site/images/placeholder1.png' %}" alt="David Liu"/>
                 <p>David Liu</p>
+                <p>David is a second year CS Major at Northeastern University. His favorite constellation is Cancer.</p>
             </li>
             <li>
-                <img class="profile" src="{% static 'star_site/images/placeholder3.jpg' %}" alt="Jason Gao"/>
+                <img class="profile" src="{% static 'star_site/images/placeholder3.png' %}" alt="Jason Gao"/>
                 <p>Jason Gao</p>
+                <p>Jason is a second year CS Major at Northeastern University. His favorite constellation is Ares.</p>
             </li>
             <li>
                 <img class="profile" src="{% static 'star_site/images/lucy.png' %}" alt="Lucy Ying"/>
@@ -39,7 +42,23 @@
                 <p>Tristen Li</p>
                 <p>Tristen is a second year CS Major at Northeastern University. His favorite constellation is Perseus.</p>
             </li>
-        </ul>
+        </ul> -->
+        <table style="width:30%">
+            <tr>
+                <td><img class="alexis" src="{% static 'star_site/images/placeholder2.jpg' %}" alt="Alexis Phan"/>
+                    <p>Alexis Phan</p>
+                </td>
+                <td>
+                    <img class="profile" src="{% static 'star_site/images/placeholder1.png' %}" alt="David Liu"/>
+                </td>
+                <td>
+                    <img class="profile" src="{% static 'star_site/images/placeholder3.png' %}" alt="Jason Gao"/>
+                </td>
+                <td>
+                    <img class="profile" src="{% static 'star_site/images/lucy.png' %}" alt="Lucy Ying"/>
+                </td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>
