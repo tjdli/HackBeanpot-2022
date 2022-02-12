@@ -25,18 +25,33 @@
 }
 .about ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    align-content: center-block;
     list-style-type: none;
-    width:100%
-    flex-wrap: wrap;
-    padding-left: 0;
+    width:100%;
+    flex-wrap: no-wrap;
+    padding-left: 10px;
 }
 .about li {
-    display:inline-block;
+    display: inline-block;
+    /* margin: 0 20px; */
+    max-width: 70%;
 }
+
+/* .about ul li p {
+    max-width: 50%;
+} */
+
 .about ul li img{
-    width:75%;
-    height: 50%;
+    float:top;
+    width: auto;
+    height: 10em;
     border-radius: 50%;
+    display: inline-block;
+}
+
+.about table {
+    table-layout:fixed;
+    width: 50%;
 }
