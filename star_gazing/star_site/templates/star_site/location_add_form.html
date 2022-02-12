@@ -9,8 +9,11 @@
     <h1>Find a great location? Add yours here!</h1>
     <form method="post">
         {% csrf_token %}
+        Location Name<br>
         {{ form.name }} <br>
+        Address<br>
         {{form.position}}<br>
+        Description<br>
         {{form.description}}
     <input type="submit" value="Submit">
     </form>

@@ -25,11 +25,16 @@ class StarLocationsView(generic.TemplateView):
 
 
 def location_list(request):
+    locations = Location.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')
+    return render(request, "star_site/star_locations.html", {'locations': locations})
+
+
+def location_form(request):
     form = LocationForm()
     if request.method == "POST":
         form = LocationForm(request.POST)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('/star_locations')
-    locations = Location.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')
-    return render(request, "star_site/star_locations.html", {'locations': locations, 'form': form})
+    # locations = Location.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')
+    return render(request, "star_site/location_add_form.html", {'form': form})
