@@ -13,13 +13,29 @@
     justify-content: center;
     text-align: center;
 }
-.about {
+
+.container {
     padding-top: 3%;
     padding-bottom: 3%;
+    margin: -200px 0px 0px -200px;
     text-align: center;
     color: white;
-    /* background-color: rgb(27, 29, 39); */
-    background-color: rgb(20, 0, 20);    
+    background-color: rgb(20, 0, 20);
+    margin: 0px;
+    overflow-x: hidden; 
+    width: 100%;  
+}
+
+.about {
+    border-radius: 25px;
+    border: 2px solid rgb(255, 255, 255);
+    margin: auto;
+    width: 90%;
+    height: auto;
+}
+
+.about h1 {
+    padding-top: 2%;
 }
 .about h3 {
     padding-top: 2%;
@@ -56,7 +72,6 @@
 }
 
 .about ul li img{
-    float:top;
     width: auto;
     height: 10em;
     border-radius: 50%;
