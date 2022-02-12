@@ -1,3 +1,6 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 .banner {
     background-image: url("https://i0.wp.com/windowscustomization.com/wp-content/uploads/2018/08/moving-stars.gif?fit=750%2C377&quality=80&strip=all&ssl=1");
     background-size: cover;
@@ -5,31 +8,35 @@
     height: 100vh;
     text-align: center;
     color: white;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
 }
-.banner h1 {
-}
 .about {
+    padding-top: 3%;
     text-align: center;
     color: white;
     background-color: #272942;
 }
 .about h3 {
     text-align: left;
-    padding-left: 10%;
+    padding-left: 2%;
 }
 .about ul {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     list-style-type: none;
-    padding-left: 5%;
-    padding-right: 5%;
+    width:100%
+    flex-wrap: wrap;
+    padding-left: 0;
 }
-
-.about ul li {
-    max-width: 30%;
+.about li {
+    display:inline-block;
+}
+.about ul li img{
+    width:75%;
+    height: 50%;
+    border-radius: 50%;
 }
