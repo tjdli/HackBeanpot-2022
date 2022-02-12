@@ -45,7 +45,13 @@
 
 .about ul li img{
     float:top;
-    width: 30%;
-    height: auto;
+    width: auto;
+    height: 10em;
     border-radius: 50%;
+    display: inline-block;
+}
+
+.about table {
+    table-layout:fixed;
+    width: 50%;
 }
