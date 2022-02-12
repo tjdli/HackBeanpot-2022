@@ -20,6 +20,14 @@ html body {
     text-align: center;
 }
 
+.banner button {
+    color: white;
+    font-size: 20;
+    height: auto;
+    width: 10%;
+    background-color: transparent;
+}
+
 .container {
     padding-top: 3%;
     padding-bottom: 3%;
