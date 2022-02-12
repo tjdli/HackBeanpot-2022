@@ -1,9 +1,11 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 # Create your views here.
 from django.utils import timezone
 from django.views import generic
 
+from .forms import LocationForm
 from .models import Location
 
 
@@ -23,5 +25,11 @@ class StarLocationsView(generic.TemplateView):
 
 
 def location_list(request):
+    form = LocationForm()
+    if request.method == "POST":
+        form = LocationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/star_locations')
     locations = Location.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')
-    return render(request, "star_site/star_locations.html", {'locations': locations})
+    return render(request, "star_site/star_locations.html", {'locations': locations, 'form': form})
