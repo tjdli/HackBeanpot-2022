@@ -1,2 +1,1 @@
 Django==4.0.1
-django_google_maps==0.12.4
