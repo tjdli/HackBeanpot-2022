@@ -7,7 +7,7 @@ class LocationForm(forms.ModelForm):
 
     class Meta:
         model = Location
-        fields = ['name', 'position', 'description', 'rating']
+        fields = ['name', 'position', 'description']
 
 
 class AddressForm(forms.Form):

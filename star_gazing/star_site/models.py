@@ -12,6 +12,5 @@ class Location(models.Model):
     position = models.CharField(max_length=1000)
     description = models.TextField()
     pub_date = models.DateTimeField('date published', default=timezone.now)
-    rating = models.IntegerField(choices=CHOICES)
     # address = map_fields.AddressField(max_length=200)
     # position = map_fields.GeoLocationField(max_length=100)
