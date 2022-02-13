@@ -1,4 +1,3 @@
-from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 
 # Create your models here.
@@ -15,3 +14,12 @@ class Location(models.Model):
     rating = models.IntegerField(choices=CHOICES)
     # address = map_fields.AddressField(max_length=200)
     # position = map_fields.GeoLocationField(max_length=100)
+
+
+"""
+class Constellation(models.Model):
+    name = models.CharField(max_length=255)
+    description = models.TextField()
+    image = models.ImageField(upload_to="star_site/images", blank=True)
+    months = models.CharField(max_length=255)
+"""

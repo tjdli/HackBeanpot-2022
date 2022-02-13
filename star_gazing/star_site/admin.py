@@ -15,5 +15,16 @@ class LocationAdmin(admin.ModelAdmin):
     ]
     list_display = ('name', 'pub_date')
 
+"""
+class ConstellationAdmin(admin.ModelAdmin):
+    fieldsets = [
+        (None, {'fields': ['name']}),
+        ("Description", {'fields': ['description']}),
+        ("Image", {'fields': ['image']}),
+        ('Months', {'fields': ['months']}),
+    ]
+    list_display = ('name', 'id')
+"""
 
 admin.site.register(Location, LocationAdmin)
+# admin.site.register(Constellation, ConstellationAdmin)
