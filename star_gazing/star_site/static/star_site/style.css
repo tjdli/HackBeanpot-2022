@@ -142,3 +142,40 @@ html body h1 {
     margin: 2em 0;
     width: 400px;
 }
+
+
+.forum {
+    color: white; 
+    /* display: flex; */
+    /* justify-content: space-evenly;
+    align-items: flex-start; */
+
+}
+
+.locationName {
+    font-size: 10px;
+}
+
+.contents {
+    display: flex;
+
+}
+
+.map{
+   
+}
+
+.map iframe {
+    height: 80%;
+    width: 80%;
+}
+
+.locDesc{
+    width: 60%;
+    max-width: 60%;
+    word-wrap: break-word;
+    outline: auto;
+    overflow-y: scroll;
+    height: 30%;
+    max-height: 30%;
+}

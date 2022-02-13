@@ -23,15 +23,25 @@
     </form>
     {% if locations %}
         {% for location in locations %}
-            <h1>{{ location.name }}</h1>
-            <p>{{ location.description }}</p>
-            <iframe
-                width="450"
-                height="250"
-                frameborder="0" style="border:0"
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDV6nqMJ7_iY1nU3reiUDrltej_Laf5BCw &q={{ location.position }}"
-                allowfullscreen>
-            </iframe>
+        <fieldset>
+            <div class = "forum">
+                <div class = "locationName">
+                    <h1>{{ location.name }}</h1>
+                </div>
+                <div class = "contents">
+
+                    <div class = "map">
+                        <iframe
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDV6nqMJ7_iY1nU3reiUDrltej_Laf5BCw &q={{ location.position }}"
+                        allowfullscreen>
+                    </iframe>   
+                    </div>
+                    <div class = "locDesc">
+                        <p> {{ location.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
         {% endfor %}
     {% endif %}
 </body>
