@@ -113,32 +113,75 @@ html body h1 {
 
 .addLoc {
     color: white;
-    padding: 2%, 10%, 2%, 10%;
+    padding: 1%, 0%, 2%, 10%;
 }
 
 .addLoc h1 {
     font-size: 300%;
-    padding: 3% 8% 0% 8%;
+    padding: .9% 8% 0% 8%;
 }
-
-/* .addLoc form h3 {
-    font-size: 150%;
-    font-weight: bold;
-    padding: 0;
-}
-
-.addLoc form p {
-    font-size: 100%;
-    padding: 0;
-} */
 
 .addLoc form {
-    padding: 0% 8% 2% 8%;
     font-size: 120%;
-    width: 60%;
 }
 
-#fieldset {
-    margin: 2em 0;
-    width: 400px;
+fieldset {
+    width: 90%;
+}
+
+legend {
+    font-size: 1.25em;
+    padding: 0 .25em;
+    padding-bottom: .75%;
+    color: #999;
+}
+
+label {
+    display:inline-block;
+    margin-top:1%;
+    margin-bottom: 1%;
+}
+
+input {
+    padding: .5em;
+    width: 80%;
+}
+
+textarea {
+    padding: .5em;
+    width: 80%;
+    max-width: 80%;
+    max-height: 10em;
+    resize: none;
+}
+
+input[type="submit"] {
+    padding: .5em 1em;
+    border-radius: 6px;
+    background-color: #888;
+    width: 10%;
+    font-weight: bold;
+}
+
+.float-contain {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-bottom: 2%;
+}
+
+.float-child1 {
+    width: 60%;
+    padding: 20px;
+} 
+
+.float-img {
+    width: 28%;
+    height:auto;
+}
+
+.float-img img{
+    width: 100%;
+    height:auto;
+    border: 2px solid white;  
 }

@@ -8,32 +8,34 @@
 <body>
     <div class="addLoc">
         <h1>Find a great location? Add yours here!</h1>
-        <form method="post">
-            <fieldset>
-                {% csrf_token %}
-                <legend>Fill out this form!</legend>
-                <label for "loName">Location Name</label> <br>
-                <!-- <input type="text" name="loName" id="loName"><br><br> -->
-                {{ form.name }} <br><br>
-
-                <label for "addy">Address</label> <br>
-                <!-- <input type="text" name="addy" id="addy"><br><br> -->
-                {{form.position}}<br><br>
-
-                <label for "desc">Viewing Description</label> <br>
-                <!-- <textarea="text" name="desc" id="desc"> -->
-                {{form.description}}<br><br>
-
-                <input type="submit" id="submit" value="Submit">
-
-            </fieldset>
-            <!-- Location Name <br> -->
-            <!-- {{ form.name }} <br><br> -->
-            <!-- Address<br>
-            {{form.position}}<br><br>
-            Description<br>
-            {{form.description}}<br><br> -->
-        </form>
+        <div class="float-contain">
+            <div class="float-child1">
+                <form method="post">
+                    <fieldset>
+                        {% csrf_token %}
+                        <legend>Fill out this form!</legend>
+                        <label for "loName">Location Name</label> <br>
+                        <!-- <input type="text" name="loName" id="loName"><br><br> -->
+                        {{ form.name }} <br><br>
+        
+                        <label for "addy">Address</label> <br>
+                        <!-- <input type="text" name="addy" id="addy"><br><br> -->
+                        {{form.position}}<br><br>
+        
+                        <label for "desc">Viewing Description</label> <br>
+                        <!-- <textarea="text" name="desc" id="desc"> -->
+                        {{form.description}}<br><br>
+        
+                        <input type="submit" id="submit" value="Submit">
+        
+                    </fieldset>
+                </form>
+            </div>
+            <div class="float-img">
+                <img src="{% static 'star_site/images/stargazing.jpg' %}" alt="StarGazing"/>
+            </div>
+        </div>
+        
     </div>
     
 </body>
