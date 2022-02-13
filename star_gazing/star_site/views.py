@@ -1,3 +1,5 @@
+import sys
+
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
@@ -8,7 +10,7 @@ from django.views import generic
 from .forms import LocationForm, AddressForm
 from .models import Location
 
-import requests, json
+import requests
 
 
 class HomePageView(generic.TemplateView):
@@ -33,8 +35,8 @@ def location_list(request):
     if request.method == "POST":
         form = AddressForm(request.POST)
         if form.is_valid():
-
-            sorted_locations = sorted(locations, key=lambda position: sort_by_distance(form.cleaned_data["address"], position.position))
+            sorted_locations = sorted(locations, key=lambda location: sort_by_distance(form.cleaned_data["address"],
+                                                                                       location.position))
             return render(request, "star_site/star_locations.html", {'form': form, 'locations': sorted_locations})
     return render(request, "star_site/star_locations.html", {'form': form, 'locations': ordered_locations})
 
@@ -50,23 +52,13 @@ def location_form(request):
     return render(request, "star_site/location_add_form.html", {'form': form})
 
 
-def distance_list(request):
-    form = AddressForm()
-    ordered_locations = Location.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')
-    locations = Location.objects.filter(pub_date__lte=timezone.now()).all()
-    if request.method == "POST":
-        form = AddressForm(request.POST)
-        if form.is_valid():
-            sorted_locations = sorted(locations, key=lambda position: sort_by_distance(form.address, position))
-            return render(request, "star_site/star_locations.html", {'locations': sorted_locations})
-    return render(request, "star_site/star_locations.html", {'locations': ordered_locations})
-
-
 def sort_by_distance(source, dest):
     url = 'https://maps.googleapis.com/maps/api/distancematrix/json?'
-    r = requests.get(url + '&destinations = ' + dest +
-                     'origins = ' + source +
-                     '&key = ' + "AIzaSyDV6nqMJ7_iY1nU3reiUDrltej_Laf5BCw")
+    key = 'AIzaSyDV6nqMJ7_iY1nU3reiUDrltej_Laf5BCw'
+    r = requests.get(url + '&key=' + key + '&destinations=' + dest +
+                     '&origins=' + source)
     result = r.json()
-    print(result)
-    return result['rows'][0]['elements'][0]["distance"]["value"]
+    try:
+        return result['rows'][0]['elements'][0]["distance"]["value"]
+    except (KeyError, IndexError):
+        return sys.maxsize
