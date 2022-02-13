@@ -1,1 +1,1 @@
-web: gunicorn star_gazing.star_gazing.wsgi
+web: gunicorn --pythonpath star_gazing star_gazing.wsgi
