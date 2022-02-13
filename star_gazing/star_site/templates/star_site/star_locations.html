@@ -6,7 +6,15 @@
     <title>Star Locations</title>
 </head>
 <body>
-    <a href="{% url 'star_site:add_location' %}"><button>Add New Location</button></a>
+    <h1>Star Locations Forum</h1>
+    <form method="post">
+        {% csrf_token %}
+        <p>Location Name</p>
+        {{ form.name }} <br>
+        {{form.position}}<br>
+        {{form.description}}
+    <input type="submit" value="Submit">
+    </form class="locations">
     {% if locations %}
         {% for location in locations %}
             <h1>{{ location.name }}</h1>
