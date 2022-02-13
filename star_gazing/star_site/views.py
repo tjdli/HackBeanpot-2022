@@ -46,7 +46,7 @@ def location_form(request):
     if request.method == "POST":
         form = LocationForm(request.POST)
         if form.is_valid():
-            locations = Location.object.filter(pub_date__lte=timezone.now()).all()
+            locations = Location.objects.filter(pub_date__lte=timezone.now()).all()
             found = False
             for location in locations:
                 if location.position == form.cleaned_data["position"]:
