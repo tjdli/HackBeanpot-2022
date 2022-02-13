@@ -6,6 +6,10 @@ html body {
     background-color: rgb(22, 0, 22);
 }
 
+html body h1 {
+    font-size: 500%;
+}
+
 .banner {
     background-image: url("https://i0.wp.com/windowscustomization.com/wp-content/uploads/2018/08/moving-stars.gif?fit=750%2C377&quality=80&strip=all&ssl=1");
     background-size: cover;
@@ -33,9 +37,9 @@ html body {
 }
 
 .banner button:hover {
-    opacity: .8;
-    background-color: white;
-    color: black;   
+    opacity: .9;
+    background-color: rgb(151, 143, 189);
+    color: white;   
 }
 
 .container {
@@ -105,4 +109,36 @@ html body {
 .about table {
     table-layout:fixed;
     width: 50%;
+}
+
+.addLoc {
+    color: white;
+    padding: 2%, 10%, 2%, 10%;
+}
+
+.addLoc h1 {
+    font-size: 300%;
+    padding: 3% 8% 0% 8%;
+}
+
+/* .addLoc form h3 {
+    font-size: 150%;
+    font-weight: bold;
+    padding: 0;
+}
+
+.addLoc form p {
+    font-size: 100%;
+    padding: 0;
+} */
+
+.addLoc form {
+    padding: 0% 8% 2% 8%;
+    font-size: 120%;
+    width: 60%;
+}
+
+#fieldset {
+    margin: 2em 0;
+    width: 400px;
 }
