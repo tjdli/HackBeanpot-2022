@@ -6,16 +6,18 @@
     <title>Star Locations</title>
 </head>
 <body>
-    <a href="{% url 'star_site:add_location' %}"><button>Add New Location</button></a>
-    <form method="post">
-        {% csrf_token %}
-        Address<br>
-        {{form.as_p}}<br>
-        <input type="submit" value="Submit">
-    </form>
+    <div class = "addLocationButton"> 
+        <a href="{% url 'star_site:add_location' %}"><button>Add New Location</button></a>
+    </div>
+    <div class = "submitButton">   
+        <form method="post">
+            {% csrf_token %}
+            {{form.as_p}}<br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
     {% if locations %}
         {% for location in locations %}
-        <fieldset>
             <div class = "forum">
                 <div class = "locationName">
                     <h1>{{ location.name }}</h1>
@@ -33,7 +35,6 @@
                     </div>
                 </div>
             </div>
-        </fieldset>
         {% endfor %}
     {% endif %}
 </body>
