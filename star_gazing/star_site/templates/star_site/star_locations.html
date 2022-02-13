@@ -9,6 +9,9 @@
 
 </head>
 <body>
+    <div class="homeButton">
+        <a href="{% url 'star_site:home' %}"><button>Home</button></a>
+    </div>
     <h3 class="whiteTxt">Found a good viewing site? Share the location and details below:</h3>
     <div class = "addLocationButton"> 
         <a class="submitButton" href="{% url 'star_site:add_location' %}"><button>Share Site!</button></a>

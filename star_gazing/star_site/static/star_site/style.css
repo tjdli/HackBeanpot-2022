@@ -202,6 +202,26 @@ input[type="submit"] {
     background-color: #999;
     border-radius: 6px;
     font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.homeButton{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.homeButton button{
+    height: 2.5em;
+    padding: 5px 2% 5px 2%;
+    background-color: #999;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.homeButton button a{
+    color: black;
+    text-decoration: none;
 }
 
 .submitButton {
