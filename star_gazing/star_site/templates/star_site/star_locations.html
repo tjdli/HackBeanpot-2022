@@ -4,9 +4,23 @@
 
     <link rel="stylesheet" type="text/css" href="{% static 'star_site/style.css' %}">
     <title>Star Locations</title>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=initMap&libraries=geometry">
+        // Obtain the distance in meters by the computeDistanceBetween method
+        // From the Google Maps extension
+        var distanceInMeters = google.maps.geometry.spherical.computeDistanceBetween(
+            markerA.getPosition(),
+            markerB.getPosition()
+        );
+    </script>
 </head>
 <body>
     <a href="{% url 'star_site:add_location' %}"><button>Add New Location</button></a>
+    <form method="post">
+        {% csrf_token %}
+        Address<br>
+        {{form.as_p}}<br>
+        <input type="submit" value="Submit">
+    </form>
     {% if locations %}
         {% for location in locations %}
             <h1>{{ location.name }}</h1>
