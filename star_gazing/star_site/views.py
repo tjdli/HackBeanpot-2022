@@ -46,7 +46,15 @@ def location_form(request):
     if request.method == "POST":
         form = LocationForm(request.POST)
         if form.is_valid():
-            form.save()
+            locations = Location.object.filter(pub_date__lte=timezone.now()).all()
+            found = False
+            for location in locations:
+                if location.position == form.cleaned_data["position"]:
+                    found = True
+                    location.description = location.description + "\n\n" + form.cleaned_data["description"]
+                    location.save()
+            if not found:
+                form.save()
             return HttpResponseRedirect('/star_locations')
     # locations = Location.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')
     return render(request, "star_site/location_add_form.html", {'form': form})
